@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mediaPlayer = MediaPlayer.create(this, R.raw.song)
-        mediaPlayer.prepareAsync()
         mediaPlayer.start()
 //        findViewById<Button>(R.id.start).setOnClickListener {
 //            mediaPlayer.start()

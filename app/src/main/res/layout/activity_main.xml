@@ -60,19 +60,17 @@
                     android:singleLine="true">
             </EditText>
 
-        </LinearLayout>
-
-        <View
-                android:id="@+id/spacer0"
-                android:layout_width="wrap_content"
-                android:layout_height="5dp"/>
 
         <TextView
                 android:id="@+id/TextView1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:text="@string/musicAuthorNote"
                 android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+
+        </LinearLayout>
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -111,22 +109,6 @@
                     android:textColor="@color/holo_grey"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColorHint="@color/holo_grey" android:layout_width="wrap_content"/>
-
-            <!--<View-->
-            <!--android:id="@+id/spacer2"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="0.25" />-->
-
-            <!--<Button-->
-            <!--android:id="@+id/restartButton"-->
-            <!--android:layout_height="48dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:onClick="onClickStart"-->
-            <!--android:text="@string/startButtonString"-->
-            <!--android:textColor="@color/square_error"-->
-            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
-            <!--android:textColorHint="@color/holo_grey" android:layout_width="wrap_content"/>-->
 
         </LinearLayout>
 
