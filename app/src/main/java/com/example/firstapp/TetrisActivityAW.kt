@@ -79,7 +79,7 @@ class TetrisActivityAW : AppCompatActivity() {
         }
     }
 
-    fun clickBottom(view: View) {
+    fun clickDown(view: View) {
         if (!plaing) {
             startGame()
         } else if (pause) {
@@ -91,7 +91,13 @@ class TetrisActivityAW : AppCompatActivity() {
         }
     }
 // 旋转
+//    todo: 待完成
     fun clickRotate(view: View) {
+
+    }
+
+    //    todo: 待完成
+    fun remove(){
 
     }
 
@@ -164,6 +170,7 @@ class TetrisActivityAW : AppCompatActivity() {
     /**
      * 产生下一个方块
      */
+    //TODO: 待完成
     fun next() {
 
         nextBlock = mutableListOf()

@@ -36,7 +36,7 @@
 				android:layout_height="match_parent">
 
 			<Button
-					android:text="left"
+					android:text=""
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:id="@+id/to_left"
@@ -53,23 +53,23 @@
 					android:layout_weight="99">
 
 				<Button
-						android:text="Button"
+						android:text="UP"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:onClick="clickTop"
 						android:id="@+id/button9"/>
 
 				<Button
-						android:text="down"
+						android:text="DOWN"
 						android:layout_marginTop="20dp"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:onClick="clickBottom"
+						android:onClick="clickDown"
 						android:id="@+id/down"/>
 			</LinearLayout>
 
 			<Button
-					android:text="right"
+					android:text="RIGHT"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:id="@+id/to_right"
@@ -79,7 +79,7 @@
 					android:layout_weight="1"/>
 
 			<Button
-					android:text="rotate"
+					android:text="ROTATE"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:id="@+id/route"
