@@ -36,7 +36,8 @@
                     android:background="@color/holo_grey"/>
 
             <ListView
-                    android:id="@android:id/list"
+                    android:id="@+id/levels_list"
+                    android:descendantFocusability="blocksDescendants"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -61,13 +62,13 @@
             </EditText>
 
 
-        <TextView
-                android:id="@+id/TextView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="@string/musicAuthorNote"
-                android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <!--<TextView-->
+            <!--android:id="@+id/TextView1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="16dp"-->
+            <!--android:text="@string/musicAuthorNote"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall"/>-->
 
 
         </LinearLayout>
@@ -76,36 +77,37 @@
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
-            <Button
-                    android:id="@+id/start"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center|top"
-                    android:layout_weight="1"
-                    android:enabled="true"
-                    android:onClick="onClickStart"
-                    android:text="start"
-                    android:textColor="@color/holo_grey"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColorHint="@color/holo_grey" android:layout_width="wrap_content"/>
-            <Button
-                    android:id="@+id/pause"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center|top"
-                    android:layout_weight="1"
-                    android:enabled="true"
-                    android:onClick="onClickPause"
-                    android:text="pause"
-                    android:textColor="@color/holo_grey"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColorHint="@color/holo_grey" android:layout_width="wrap_content"/>
+            <!--<Button-->
+            <!--android:id="@+id/start"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:layout_gravity="center|top"-->
+            <!--android:layout_weight="1"-->
+            <!--android:enabled="true"-->
+            <!--android:onClick="onClickStart"-->
+            <!--android:text="重玩"-->
+            <!--android:textColor="@color/holo_grey"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+            <!--android:textColorHint="@color/holo_grey" android:layout_width="wrap_content"/>-->
+            <!--<Button-->
+            <!--android:id="@+id/pause"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:layout_gravity="center|top"-->
+            <!--android:layout_weight="1"-->
+            <!--android:enabled="true"-->
+            <!--android:onClick="onClickPause"-->
+            <!--android:text="pause"-->
+            <!--android:textColor="@color/holo_grey"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+            <!--android:textColorHint="@color/holo_grey" android:layout_width="wrap_content"/>-->
+            <!--<view android:layout_width="wrap_content" android:layout_height="40dp" android:layout_weight="1" android:text=" "></view>-->
             <Button
                     android:id="@+id/stop"
                     android:layout_height="48dp"
                     android:layout_gravity="center|top"
                     android:layout_weight="1"
                     android:enabled="true"
-                    android:onClick="onClickStop"
-                    android:text="stop"
+                    android:onClick="onClickStart"
+                    android:text="开始"
                     android:textColor="@color/holo_grey"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColorHint="@color/holo_grey" android:layout_width="wrap_content"/>

@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">俄罗斯方块</string>
-    <string name="highscore_title">最高成绩</string>
+    <string name="highscore_title">选择难度等级</string>
     <string name="highscoreListDescription">高分榜单</string>
     <string name="playerNameInputFieldHint">输入游戏名</string>
     <string name="resumeButtonString">继续游戏</string>
-    <string name="musicAuthorNote">F</string>
+    <!--<string name="musicAuthorNote">F</string>-->
     <string name="startButtonString">新游戏</string>
 </resources>
