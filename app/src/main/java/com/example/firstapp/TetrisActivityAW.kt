@@ -48,7 +48,7 @@ class TetrisActivityAW : AppCompatActivity() {
      */
     fun startGame() {
         plaing = true
-        pause=false
+        pause = false
         handle.postDelayed(runnable, 1000)
     }
 
@@ -58,8 +58,8 @@ class TetrisActivityAW : AppCompatActivity() {
 
     fun stopGame() {
         handle.removeCallbacks(runnable)
-        plaing=false
-        pause=false
+        plaing = false
+        pause = false
     }
 
     fun clickLeft(view: View) {
@@ -73,21 +73,25 @@ class TetrisActivityAW : AppCompatActivity() {
     fun clickTop(view: View) {
         if (pause) {
             stopGame()
-            plaing=false
+            plaing = false
         } else {
             pauseGame()
         }
     }
 
     fun clickBottom(view: View) {
-        if(pause){
-            pause=false
-        }else{
+        if (!plaing) {
             startGame()
+        } else if (pause) {
+            pause = false
+        } else {
+//            直接落下
+            while (update()) {
+            }
         }
     }
-
-    fun clickRotate(view: View){
+// 旋转
+    fun clickRotate(view: View) {
 
     }
 
@@ -95,12 +99,18 @@ class TetrisActivityAW : AppCompatActivity() {
     /**
      * 定时下落更新
      */
-    fun update() {
-        if (!pause)
+    fun update(): Boolean {
+        return if (pause) {
+            false
+        }else{
             if (canDown()) {
                 currentRow++
-            } else
+                true
+            } else {
                 next()
+                false
+            }
+        }
 
     }
 
