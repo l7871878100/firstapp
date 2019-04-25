@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     fun onClickStart(view: View) {
         val nickName = findViewById<EditText>(R.id.nicknameEditView).text.toString()
-        val intent = Intent(this, GameActivity::class.java)
+        val intent = Intent(this, TetrisActivityAW::class.java)
         intent.putExtra("level", level) //等级
         intent.putExtra("nickName", nickName) //昵称用户名
         intent.putExtra("imei", imei) //昵称用户名
