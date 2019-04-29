@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:tools="http://schemas.android.com/tools"
-		xmlns:app="http://schemas.android.com/apk/res-auto"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		tools:context=".TetrisActivityAW">
@@ -20,13 +19,17 @@
 
 		<ListView
 				android:layout_weight="1"
+				android:id="@+id/tetris_left"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"/>
 		<LinearLayout
+				android:id="@+id/tetris_right"
 				android:orientation="vertical"
 				android:layout_width="match_parent"
 				android:layout_weight="3"
-				android:layout_height="match_parent"></LinearLayout>
+				android:layout_height="match_parent">
+
+		</LinearLayout>
 	</LinearLayout>
 
 		<LinearLayout

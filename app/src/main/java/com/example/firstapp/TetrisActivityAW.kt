@@ -1,9 +1,9 @@
 package com.example.firstapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
 class TetrisActivityAW : AppCompatActivity() {
 
@@ -90,14 +90,34 @@ class TetrisActivityAW : AppCompatActivity() {
             }
         }
     }
-// 旋转
-//    todo: 待完成
+
+    // 旋转
     fun clickRotate(view: View) {
+        rotate(dowBlock)
 
     }
 
-    //    todo: 待完成
-    fun remove(){
+    //    删除一行
+    fun removeColumn() {
+        var num = 0
+        for (row in allRows) {
+            var canRemove = true
+            for (column in row) {
+                if (column == 0) {
+                    canRemove = false
+                    break
+                }
+            }
+            if (canRemove) {
+                num++
+                for (index in row.indices) {
+                    row[index] = 0
+                }
+            }
+            if (num != 0) {
+                update()
+            }
+        }
 
     }
 
@@ -108,11 +128,12 @@ class TetrisActivityAW : AppCompatActivity() {
     fun update(): Boolean {
         return if (pause) {
             false
-        }else{
+        } else {
             if (canDown()) {
                 currentRow++
                 true
             } else {
+                removeColumn()
                 next()
                 false
             }
@@ -183,5 +204,19 @@ class TetrisActivityAW : AppCompatActivity() {
         }
         currentRow = 0
 
+    }
+
+    private fun rotate(matrix: MutableList<MutableList<Int>>) {
+        val n = matrix.size
+        val limit = (n - 1) / 2
+        for (i in 0..limit) {
+            for (j in i until n - 1 - i) {
+                val temp = matrix[i][j]
+                matrix[i][j] = matrix[n - 1 - j][i]
+                matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j]
+                matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i]
+                matrix[j][n - 1 - i] = temp
+            }
+        }
     }
 }
